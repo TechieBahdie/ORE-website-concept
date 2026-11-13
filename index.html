@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ORE — Nigerian fashion brand for joggers, tank tops and everyday wear." />
+  <title>ỌRẸ | Joggers & Tank Tops</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#171717;--muted:#77736e;--cream:#f7f4ee;--paper:#fffdfa;--orange:#c76b43;--line:#e8e2d9}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif}
+    a{color:inherit;text-decoration:none}button{font:inherit}.topline{background:#1c1c1c;color:#fff;text-align:center;padding:10px 16px;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+    header{height:78px;padding:0 6vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:#fffdfa;position:sticky;top:0;z-index:5}
+    .logo{font-size:25px;font-weight:700;letter-spacing:.17em}.logo small{display:block;font-size:8px;letter-spacing:.32em;font-weight:500;text-align:center;margin-top:2px}
+    nav{display:flex;gap:32px;font-size:12px;letter-spacing:.12em;text-transform:uppercase}.nav-cta{border:1px solid var(--ink);padding:12px 18px;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+    .hero{min-height:650px;display:grid;grid-template-columns:1fr 1fr;background:var(--cream)}
+    .hero-copy{padding:90px 8vw 80px 10vw;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+    .eyebrow{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--orange);font-weight:700}
+    h1{font-family:"Playfair Display",serif;font-size:clamp(48px,6vw,82px);line-height:1.02;font-weight:600;margin:22px 0}
+    .hero-copy p{color:#69645f;line-height:1.8;max-width:390px;font-size:14px}
+    .actions{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}.btn{padding:16px 22px;background:var(--ink);color:white;font-size:11px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--ink);display:inline-flex;align-items:center;justify-content:center}.btn.outline{background:transparent;color:var(--ink)}
+    .hero-art{position:relative;overflow:hidden;min-height:500px;background:#d9cfc2;display:flex;align-items:center;justify-content:center}
+    .hero-art:before{content:"";position:absolute;width:62%;height:78%;background:#b8a99a;border-radius:48% 48% 8px 8px;transform:translate(5%,8%)}
+    .hero-art:after{content:"ỌRẸ";position:absolute;right:7%;bottom:6%;font-family:"Playfair Display",serif;font-size:clamp(60px,10vw,140px);color:rgba(255,255,255,.42);letter-spacing:.08em}
+    .art-card{position:relative;z-index:1;width:44%;height:65%;border:1px solid rgba(255,255,255,.7);display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;color:#fff;font-family:"Playfair Display",serif;font-size:clamp(22px,3vw,38px);line-height:1.2;background:linear-gradient(145deg,rgba(38,35,32,.15),rgba(38,35,32,.45));box-shadow:0 20px 60px #76695b55}
+    .art-note{position:absolute;z-index:2;left:7%;top:8%;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#fff}
+    .ticker{padding:17px 10px;text-align:center;border-bottom:1px solid var(--line);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#5e5953;word-spacing:9px}
+    section{padding:88px 7vw}.section-head{text-align:center;margin:0 auto 42px;max-width:570px}.section-head h2{font:600 clamp(34px,4vw,48px)/1.1 "Playfair Display",serif;margin:13px 0}.section-head p{font-size:13px;line-height:1.8;color:var(--muted)}
+    .categories{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.category{min-height:330px;position:relative;overflow:hidden;background:#e8dfd4;display:flex;align-items:flex-end;padding:25px}.category:nth-child(2){background:#d4c7b9}.category:nth-child(3){background:#c7b9aa}
+    .category:before{content:"";position:absolute;width:58%;height:75%;left:21%;top:9%;border-radius:48% 48% 8px 8px;background:linear-gradient(145deg,#f4eee5,#a99b8d);opacity:.8}
+    .category:nth-child(2):before{background:linear-gradient(145deg,#eee8df,#8e8278)}.category:nth-child(3):before{background:linear-gradient(145deg,#f2e9de,#766d64)}
+    .category-label{position:relative;z-index:1;background:#fffdfa;padding:15px 18px;min-width:70%;display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+    .category-label span:last-child{font-size:18px}
+    .product-wrap{background:#f8f6f2}.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.product{background:#fff}.product-visual{height:290px;display:flex;align-items:center;justify-content:center;background:#e9e2d9;position:relative;overflow:hidden}.product:nth-child(2) .product-visual{background:#ded8d0}.product:nth-child(3) .product-visual{background:#d7cec3}
+    .product-visual:before{content:"";width:40%;height:68%;border-radius:42% 42% 12% 12%;background:linear-gradient(135deg,#f5f0e9,#aaa095);box-shadow:0 15px 35px #53483d33}
+    .product:nth-child(2) .product-visual:before{background:linear-gradient(135deg,#292725,#77716b)}.product:nth-child(3) .product-visual:before{background:linear-gradient(135deg,#c6b8a9,#766b61)}
+    .preview-tag{position:absolute;left:14px;top:14px;background:#fff;padding:7px 9px;font-size:8px;letter-spacing:.12em;text-transform:uppercase}
+    .product-info{padding:17px 16px 20px}.product-info h3{font-size:13px;font-weight:600;margin:0 0 7px}.product-info p{font-size:11px;color:var(--muted);margin:0;line-height:1.6}
+    .known-price{margin-top:12px;font-size:13px;font-weight:700}.product-note{font-size:10px;color:#8a837c;margin-top:6px}
+    .bulk{background:#211f1d;color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;padding:76px 9vw}.bulk h2{font:600 clamp(34px,4vw,52px)/1.08 "Playfair Display",serif;margin:15px 0}.bulk p{color:#c9c2bb;font-size:13px;line-height:1.8;max-width:430px}.bulk .eyebrow{color:#e39a74}.bulk-stat{border:1px solid #5a514a;padding:35px;text-align:center}.bulk-stat strong{font:600 44px "Playfair Display",serif;display:block}.bulk-stat span{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#c9c2bb}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:center}.about-art{min-height:370px;background:linear-gradient(145deg,#d6c9bb,#9f9082);display:flex;align-items:center;justify-content:center;color:#fff;font:600 58px "Playfair Display",serif;letter-spacing:.15em}.about h2{font:600 clamp(34px,4vw,48px)/1.1 "Playfair Display",serif;margin:15px 0}.about p{font-size:13px;line-height:1.9;color:var(--muted)}
+    .contact{background:#f1ece5;text-align:center}.contact h2{font:600 clamp(36px,5vw,58px)/1.1 "Playfair Display",serif;margin:15px 0}.contact p{color:var(--muted);font-size:13px;line-height:1.8;max-width:470px;margin:0 auto 26px}
+    footer{background:#171615;color:#fff;padding:35px 7vw;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.footer-logo{font-weight:700;letter-spacing:.2em;font-size:18px}.footer-meta{color:#aaa29a;font-size:10px;letter-spacing:.08em}
+    @media(max-width:760px){header{height:68px;padding:0 5vw}.logo{font-size:21px}nav{display:none}.hero{grid-template-columns:1fr}.hero-copy{padding:68px 8vw}.hero-art{min-height:420px}.categories,.product-grid{grid-template-columns:1fr}.category{min-height:300px}.product-visual{height:330px}.bulk{grid-template-columns:1fr;padding:65px 8vw}.about{grid-template-columns:1fr}.about-art{min-height:280px}section{padding:68px 7vw}}
+  </style>
+</head>
+<body>
+  <div class="topline">Everyday essentials, made to move · Ikorodu, Lagos</div>
+  <header>
+    <a class="logo" href="#">ỌRẸ<small>JOGGERS & TANK TOPS</small></a>
+    <nav><a href="#collections">Collections</a><a href="#featured">Featured</a><a href="#about">Our story</a></nav>
+    <a class="nav-cta" href="https://wa.me/2348129808573?text=Hello%20ORE%2C%20I%27d%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">Order on WhatsApp</a>
+  </header>
+  <main>
+    <div class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">The everyday edit</span>
+        <h1>Comfort looks<br>good on you.</h1>
+        <p>Easy-to-wear pieces for your everyday rotation. Discover joggers, tank tops and wardrobe essentials from ỌRẸ.</p>
+        <div class="actions"><a class="btn" href="#collections">Explore the collection</a><a class="btn outline" href="https://wa.me/2348129808573?text=Hello%20ORE%2C%20please%20send%20me%20your%20available%20pieces." target="_blank" rel="noopener">Chat with us</a></div>
+      </div>
+      <div class="hero-art"><span class="art-note">Made for your everyday</span><div class="art-card">Move freely.<br>Feel like you.</div></div>
+    </div>
+    <div class="ticker">JOGGERS ✳ TANK TOPS ✳ EVERYDAY WEAR ✳ IKORODU LAGOS</div>
+    <section id="collections">
+      <div class="section-head"><span class="eyebrow">Find your fit</span><h2>Made for the everyday</h2><p>Explore the pieces ỌRẸ is known for. Select a category and message the brand for current styles, colours and availability.</p></div>
+      <div class="categories">
+        <a class="category" href="#featured"><div class="category-label">Joggers <span>↗</span></div></a>
+        <a class="category" href="#featured"><div class="category-label">Tank tops <span>↗</span></div></a>
+        <a class="category" href="#featured"><div class="category-label">Everyday wear <span>↗</span></div></a>
+      </div>
+    </section>
+    <section class="product-wrap" id="featured">
+      <div class="section-head"><span class="eyebrow">A little preview</span><h2>Featured from ỌRẸ</h2><p>A sample of how products can be presented online. Ask the brand on WhatsApp for the full catalogue and current availability.</p></div>
+      <div class="product-grid">
+        <article class="product"><div class="product-visual"><span class="preview-tag">Featured piece</span></div><div class="product-info"><h3>Ribbed Halter Neck Top</h3><p>Everyday styling · Contact ỌRẸ to confirm available colours and sizes.</p><div class="known-price">₦4,500</div><div class="product-note">Publicly listed price · confirm current availability</div></div></article>
+        <article class="product"><div class="product-visual"><span class="preview-tag">Collection</span></div><div class="product-info"><h3>Joggers</h3><p>Explore available styles, sizes and colours directly with the brand.</p><div class="known-price">Ask for price</div><div class="product-note">Catalogue details to be confirmed</div></div></article>
+        <article class="product"><div class="product-visual"><span class="preview-tag">Collection</span></div><div class="product-info"><h3>Tank Tops</h3><p>Find your preferred fit and ask about current stock.</p><div class="known-price">Ask for price</div><div class="product-note">Catalogue details to be confirmed</div></div></article>
+      </div>
+    </section>
+    <div class="bulk">
+      <div><span class="eyebrow">Buying in quantity?</span><h2>Good things come<br>in multiples.</h2><p>Planning a bulk order? ỌRẸ has publicly shared a bulk offer on selected ribbed halter neck tops. Message the team to confirm the current offer, quantities and availability.</p><a class="btn" href="https://wa.me/2348129808573?text=Hello%20ORE%2C%20I%27m%20interested%20in%20your%20bulk%20prices." target="_blank" rel="noopener">Ask about bulk orders</a></div>
+      <div class="bulk-stat"><strong>10 for ₦35,000</strong><span>Publicly listed bulk offer · selected top</span></div>
+    </div>
+    <section class="about" id="about">
+      <div class="about-art">ỌRẸ</div>
+      <div><span class="eyebrow">About the brand</span><h2>Your everyday style, made easy.</h2><p>ỌRẸ is a Nigerian fashion brand based in Ikorodu, Lagos, featuring joggers, tank tops and everyday wear. This concept gives customers a simple place to discover the brand, preview featured pieces and start an order conversation.</p><p>As the catalogue grows, this space can be updated with real product photography, sizes, colour options, delivery information and customer reviews.</p></div>
+    </section>
+    <section class="contact">
+      <span class="eyebrow">Ready when you are</span><h2>Let's find your next favourite.</h2><p>For orders, availability, sizing and delivery enquiries, speak directly with the ỌRẸ team.</p>
+      <a class="btn" href="https://wa.me/2348129808573?text=Hello%20ORE%2C%20I%27d%20like%20to%20make%20an%20order%20enquiry." target="_blank" rel="noopener">Start a WhatsApp chat</a>
+    </section>
+  </main>
+  <footer><div class="footer-logo">ỌRẸ</div><div class="footer-meta">JOGGERS & TANK TOPS · IKORODU, LAGOS</div><div class="footer-meta">© 2026 ỌRẸ · CONCEPT PREVIEW</div></footer>
+</body>
+</html>
